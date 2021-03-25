@@ -1,0 +1,43 @@
+[
+    {
+        "id": "e7ce13bd.27a04",
+        "type": "ui_template",
+        "z": "bdad8511.f4a168",
+        "group": "51dd2371.7cbc4c",
+        "name": "CSS e JS Footer",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<style>\n    #Casa_Footer{\n        visibility: hidden\n    }\n    #Esterno_Footer{\n        /*position:fixed;*/\n        visibility: hidden;\n    }\n    #Tapparelle_Footer{\n        visibility: hidden\n        /*position:fixed;*/\n    }\n\n    .puls{\n        width:24.5%;\n        height:100%;\n        vertical-align:middle;\n        border-radius: 8px 8px 8px 8px;\n        background-color:#0094ce;\n        text-transform: uppercase;\n        color: white;\n        font-weight: bold;\n    }\n    .footer {\n        position: fixed;\n        left: 0;\n        bottom: 0;\n        width: 100%;\n        height: 80px;\n        z-index:100;\n        visibility:visible;\n    }\n    button:focus {\n        outline:none;\n        box-shadow: none;\n    }\n</style>\n<script>\nfunction restore_bg(x) {\n            $(this).css(\"background-color\", x);\n    };\n\n$('.touched').on('mousedown', function() {\n    \n    var x= $(this).css(\"background-color\");\n    $(this).css(\"background-color\", \"green\");\n    \n    setTimeout(restore_bg.bind(this,x),100);\n    navigator.vibrate(80);\n    });\n    \n</script>\n\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "global",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "c96d27d8.29ade8"
+            ]
+        ]
+    },
+    {
+        "id": "51dd2371.7cbc4c",
+        "type": "ui_group",
+        "name": "Footer",
+        "tab": "a39ebb6e.f66598",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "a39ebb6e.f66598",
+        "type": "ui_tab",
+        "name": "Casa",
+        "icon": "fa-home",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
